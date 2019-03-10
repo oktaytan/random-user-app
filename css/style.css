@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app__title {
+  font-size: 1.5rem;
+  color: #5f27cd;
+  margin-top: 4rem;
+  margin-bottom: 4.8rem;
+  text-transform: uppercase;
+}
+
+.card {
+  width: 28rem;
+  height: 26.25rem;
+  border-radius: 1rem;
+  border: 1px solid #5f27cd;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 1.625rem rgba(0, 0, 0, 0.36);
+          box-shadow: 0 0 1.625rem rgba(0, 0, 0, 0.36);
+}
+
+.card::before {
+  content: '';
+  width: 100%;
+  height: 6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5f27cd;
+  opacity: 0.2;
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 1px solid #acacac;
+  z-index: -1;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.user__img {
+  width: 8.75rem;
+  height: 8.75rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: #fff;
+  margin-top: 1.7rem;
+  margin-bottom: 2.625rem;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user__img:hover .newuser__btn {
+  top: 50%;
+}
+
+.user__img:hover img {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.user__img img {
+  border-radius: 50%;
+  width: 100%;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.user__img .newuser__btn {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  background: none;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: rgba(29, 209, 161, 0.6);
+  border-radius: 50%;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  -webkit-transition: top 0.3s cubic-bezier(0.23, 0.87, 0.59, 1.22);
+  transition: top 0.3s cubic-bezier(0.23, 0.87, 0.59, 1.22);
+  cursor: pointer;
+}
+
+.user__info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.user__info__titles {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  margin-right: 2.5rem;
+}
+
+.user__info__titles::after {
+  content: '';
+  width: 2px;
+  height: 11.5rem;
+  position: absolute;
+  background-color: #5f27cd;
+  top: 0;
+  right: -1rem;
+  border-radius: 2px;
+}
+
+.user__info__titles .arrow {
+  position: absolute;
+  top: 0.35rem;
+  right: -1.6rem;
+  width: 0;
+  height: 0;
+  border: 0.6rem solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-color: transparent transparent transparent #5f27cd;
+  border-right-width: 0;
+  -webkit-transition: top 0.3s cubic-bezier(0.23, 0.87, 0.59, 1.22);
+  transition: top 0.3s cubic-bezier(0.23, 0.87, 0.59, 1.22);
+}
+
+.user__info__titles .title {
+  display: block;
+  padding: 0.3rem 0;
+  cursor: pointer;
+  font-size: 1.125rem;
+  color: #acacac;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.user__info__titles .title:hover {
+  color: #5f27cd;
+}
+
+.user__info__details {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.user__info__details .detail {
+  display: block;
+  padding: 0.3rem 0;
+  font-size: 1.125rem;
+  color: #acacac;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.user__info__details .detail.select {
+  color: #1dd1a1;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+/*# sourceMappingURL=style.css.map */
